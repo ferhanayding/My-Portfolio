@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { EXPERIENCES } from "@/data/experience";
 import { ExperienceCard } from "../../components/experience-card";
 import { CtaCard } from "../../components/experience-card/empty-card";
+import Divider from "@/components/divider";
 
 export default function WorkExperience() {
   const railRef = useRef<HTMLDivElement>(null);
@@ -53,9 +54,9 @@ export default function WorkExperience() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="min-h-screen flex flex-col  justify-evenly relative overflow-hidden text-left max-w-6xl px-6 sm:px-10 mx-auto"
+      className="md:min-h-screen flex flex-col  justify-evenly  text-left max-w-6xl px-6 sm:px-10 mx-auto"
     >
-      <div className="text-center my-16 md:mt-0 ">
+      <div className="text-center md:my-16 my-10 md:mt-14">
         <Title title="EXPERIENCE" />
       </div>
 
@@ -67,6 +68,8 @@ export default function WorkExperience() {
         onMouseLeave={endDrag}
         onMouseUp={endDrag}
         className={`
+          mb-0
+          md:mb-20
           rail fancy-scrollbar cursor-grab
           w-full p-2 sm:p-6 
           flex flex-col space-y-6 
@@ -80,6 +83,8 @@ export default function WorkExperience() {
         ))}
         <CtaCard />
       </div>
+
+      <Divider className="mt-10" />
     </motion.div>
   );
 }

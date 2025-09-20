@@ -2,6 +2,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "../../components/background-circles";
 import HashLink from "../../components/hash-link";
+import Divider from "@/components/divider";
 
 type Props = {};
 
@@ -48,6 +49,7 @@ export default function Hero({}: Props) {
           </HashLink>
         </div>
       </div>
+       <Divider className="bg-primary/50" />
     </div>
   );
 }

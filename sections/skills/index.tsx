@@ -14,7 +14,15 @@ import {
   SiHtml5,
   SiTailwindcss,
 } from "react-icons/si";
-
+import {
+  SiMui,
+  SiReactquery,
+  SiReacthookform,
+  SiSwiper,
+  SiFramer,
+  SiGitlab,
+} from "react-icons/si";
+import { TbApi, TbNetwork, TbTopologyStar3, TbShare3 } from "react-icons/tb";
 import SkillItem from "../../components/skill-item";
 type Props = {};
 type SkillData = {
@@ -103,18 +111,96 @@ const data: SkillData[] = [
     title: "tailwind",
     color: "#07B0CE",
   },
+  {
+    directionLeft: false,
+    icon: <SiMui className="text-[40px]" color="#007FFF" />,
+    title: "Material UI",
+    color: "#007FFF",
+  },
+  {
+    directionLeft: true,
+    icon: <SiReactquery className="text-[40px]" color="#FF4154" />,
+    title: "React Query",
+    color: "#FF4154",
+  },
+  {
+    directionLeft: false,
+    icon: <SiReacthookform className="text-[40px]" color="#02539A" />,
+    title: "Formik • Yup",
+    color: "#02539A",
+  },
+  {
+    directionLeft: true,
+    icon: <SiReacthookform className="text-[40px]" color="#EC5990" />,
+    title: "React Hook Form",
+    color: "#EC5990",
+  },
+  {
+    directionLeft: false,
+    icon: <TbTopologyStar3 className="text-[40px]" color="#7C3AED" />,
+    title: "React Flow",
+    color: "#7C3AED",
+  },
+  {
+    directionLeft: true,
+    icon: <TbShare3 className="text-[40px]" color="#61DAFB" />,
+    title: "Context API",
+    color: "#61DAFB",
+  },
+  {
+    directionLeft: false,
+    icon: <TbApi className="text-[40px]" color="#22C55E" />,
+    title: "REST",
+    color: "#22C55E",
+  },
+  {
+    directionLeft: true,
+    icon: <TbNetwork className="text-[40px]" color="#0EA5E9" />,
+    title: "WebSocket",
+    color: "#0EA5E9",
+  },
+  {
+    directionLeft: false,
+    icon: <SiSwiper className="text-[40px]" color="#6332F6" />,
+    title: "Swiper",
+    color: "#6332F6",
+  },
+  {
+    directionLeft: true,
+    icon: <SiFramer className="text-[40px]" color="#0055FF" />,
+    title: "Framer Motion",
+    color: "#0055FF",
+  },
+  {
+    directionLeft: false,
+    icon: <SiGitlab className="text-[40px]" color="#FCA326" />,
+    title: "GitLab • CI/CD",
+    color: "#FCA326",
+  },
+  {
+    directionLeft: true,
+    icon: <TbApi className="text-[40px]" color="#10B981" />,
+    title: "SWR",
+    color: "#10B981",
+  },
+  {
+    directionLeft: false,
+    icon: <TbShare3 className="text-[40px]" color="#764ABC" />,
+    title: "Redux Toolkit",
+    color: "#764ABC",
+  },
 ];
 
 export default function Skills({}: Props) {
   return (
     <motion.div
-      className="h-screen flex flex-col
-     justify-evenly items-center max-w-6xl  relative overflow-hidden text-left px-10  mx-auto"
+      className="
+      max-w-6xl overflow-hidden text-left p-10 my-auto  mx-auto"
     >
-      <div className="text-center">
+      <div className="text-center mb-10">
         <Title title="skills" />
       </div>
-      <div className="grid grid-cols-4 gap-5 ">
+      <div className="grid grid-cols-3  md:grid-cols-9 gap-5 ">
         {data.map((SkillData) => (
           <SkillItem data={SkillData} />
         ))}

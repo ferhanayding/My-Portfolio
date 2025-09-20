@@ -60,7 +60,6 @@ export function CtaCard() {
           ve performans odaklı arayüzler için iletişime geçin.
         </p>
 
-        {/* Büyük mail butonu: mailto + fallback */}
         <button
           type="button"
           onClick={onMailClick}

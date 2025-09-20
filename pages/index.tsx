@@ -1,3 +1,4 @@
+import Divider from "@/components/divider";
 import Header from "@/components/header";
 import About from "@/sections/about";
 import Contact from "@/sections/contact";
@@ -6,7 +7,6 @@ import MyProjects from "@/sections/projects";
 import Skills from "@/sections/skills";
 import WorkExperience from "@/sections/work-experience";
 import { Inter } from "next/font/google";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,24 +17,30 @@ export default function Home() {
        text-white z-0 overflow-x-hidden scroll-smooth`}
     >
       <Header />
-      <section id="hero">
+      <section id="hero" className=" relative">
         <Hero />
+    
       </section>
-      <section id="about" className="scroll-mt-[72px]">
+      <section id="about" className="scroll-mt-[72px] relative">
         <About />
+       
       </section>
-      <section id="experience" className="scroll-mt-[72px]">
+      <section id="experience" className="scroll-mt-[72px] relative">
         <WorkExperience />
+       
       </section>
-      <section id="projects" className="scroll-mt-[72px]">
-        <MyProjects />a
+      <section id="projects" className="scroll-mt-[72px] relative">
+        <MyProjects />
+     
       </section>
-      <section id="skills" className="scroll-mt-[72px]">
+      <section id="skills" className="scroll-mt-[72px] relative">
         <Skills />
+        {/* <Divider /> */}
       </section>
-      <section id="contact" className="scroll-mt-[72px]">
+      {/* <section id="contact" className="scroll-mt-[72px] relative">
         <Contact />
-      </section>
+        <Divider inverted />
+      </section> */}
     </main>
   );
 }

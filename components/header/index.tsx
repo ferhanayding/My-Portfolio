@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { GithubIcon } from "lucide-react";
 type Props = {};
 
 export default function Header({}: Props) {
@@ -26,7 +27,7 @@ export default function Header({}: Props) {
         className="flex flex-row  items-center"
       >
         <SocialIcon
-          url="https://www.linkedin.com/in/ferhan-ayd%C4%B1n-491027231/"
+          url="https://www.linkedin.com/in/ferhan-aydin-6904402b4/"
           fgColor="gray"
           bgColor="transparent"
         />
@@ -43,6 +44,11 @@ export default function Header({}: Props) {
         />
         <SocialIcon
           url="https://medium.com/@ferhanaydin099"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url="https://github.com/ferhanayding"
           fgColor="gray"
           bgColor="transparent"
         />
@@ -64,7 +70,7 @@ export default function Header({}: Props) {
         className="flex flex-row  items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
-          url=""
+          url="mailto:ferhanaydin099@gmail.com"
           className="cursor-pointer"
           network="email"
           fgColor="gray"

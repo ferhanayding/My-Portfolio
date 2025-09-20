@@ -22,7 +22,7 @@ export default function SkillItem({ data }: SkillItemProps) {
         {data.icon}
       </div>
       <div
-        className={`absolute uppercase opacity-0 transition-all tracking-[1px] font-semibold duration-300 group-hover:opacity-100    `}
+        className={`absolute text-base text-center uppercase opacity-0 transition-all  font-medium duration-300 group-hover:opacity-100    `}
       >
         <span style={{ color: data.color }}>{data.title}</span>
       </div>
