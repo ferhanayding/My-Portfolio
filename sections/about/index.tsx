@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Title from "../title";
+import Title from "../../components/title";
 type Props = {};
 
 export default function About({}: Props) {

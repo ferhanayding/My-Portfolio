@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TbBrandRedux } from "react-icons/tb";
 type SkillItemProps = {
   data: {
     directionLeft: boolean;
@@ -12,6 +11,7 @@ type SkillItemProps = {
 export default function SkillItem({ data }: SkillItemProps) {
   return (
     <motion.div
+      key={data.title}
       initial={{ x: data.directionLeft ? -200 : 200, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1 }}

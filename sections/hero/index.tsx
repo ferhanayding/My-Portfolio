@@ -1,7 +1,7 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import BackgroundCircles from "../backgroundCircles";
-import Link from "next/link";
+import BackgroundCircles from "../../components/background-circles";
+import HashLink from "../../components/hash-link";
 
 type Props = {};
 
@@ -33,19 +33,19 @@ export default function Hero({}: Props) {
           <span className="mr-3 text-primary/70">{text}</span>
           <Cursor cursorColor="#f7ab0a" />
         </h1>
-        <div className="mt-20  hidden sm:block ">
-          <Link href={"#about"}>
+        <div className="mt-20 hidden sm:block ">
+          <HashLink href="/#about">
             <button className="heroButton">About</button>
-          </Link>
-          <Link href={"#experience"}>
+          </HashLink>
+          <HashLink href="/#experience">
             <button className="heroButton">Experience</button>
-          </Link>
-          <Link href={"#skills"}>
+          </HashLink>
+          <HashLink href="/#skills">
             <button className="heroButton">Skills</button>
-          </Link>
-          <Link href={"#projects"}>
+          </HashLink>
+          <HashLink href="/#projects">
             <button className="heroButton">Projects</button>
-          </Link>
+          </HashLink>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
-import Title from "../title";
+import Title from "../../components/title";
 import { TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaSass } from "react-icons/fa";
 import { GiOctopus } from "react-icons/gi";
@@ -15,7 +15,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
-import SkillItem from "../skilltem";
+import SkillItem from "../../components/skill-item";
 type Props = {};
 type SkillData = {
   directionLeft: boolean;
@@ -109,7 +109,7 @@ export default function Skills({}: Props) {
   return (
     <motion.div
       className="h-screen flex flex-col
-     justify-evenly items-center max-w-[2000]  relative overflow-hidden text-left px-10  mx-auto"
+     justify-evenly items-center max-w-6xl  relative overflow-hidden text-left px-10  mx-auto"
     >
       <div className="text-center">
         <Title title="skills" />

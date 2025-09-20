@@ -1,4 +1,4 @@
-import { Experience } from "@/components/experienceCard";
+import { Experience } from "@/components/experience-card";
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -6,42 +6,45 @@ export const EXPERIENCES: Experience[] = [
     role: "Frontend Developer",
     location: "İstanbul",
     remote: true,
-    website: "https://priviahub.com",
     start: "Tem 2022",
     end: "Haz 2025",
     summary:
-      "Siber güvenlik odaklı ürünlerde uçtan uca arayüz geliştirme. Modern UI mimarisi, yeniden kullanılabilir bileşenler ve performans/erişilebilirlik odağıyla ürün deneyimini iyileştirdim.",
+      "Privia ekosistemindeki ürünlerde uçtan uca frontend geliştirme: kimlik/doğrulama (login–logout, session yenileme), yetkilendirme bazlı yönlendirme/route guard’lar, responsive layout ve tema yönetimi; veri yoğun sayfalar için tablo, filtre, arama, sıralama, sayfalama/infinite-scroll; kart ve liste görünümleri; form akışları (React Hook Form/Formik + Yup), validasyon ve kapsamlı hata yönetimi; loading/skeleton/empty durumları; e-posta şablonları (transactional mail); gerçek-zamanlı sohbet ve bildirimler (WebSocket); global state ve caching (Redux Toolkit, React Query/SWR); erişilebilirlik (ARIA) ve performans iyileştirmeleri (lazy load, code-splitting, memoization). CI/CD süreçleri ve code review ile sürekli teslimat.",
     projects: [
       {
         name: "Privia Hub v3",
+
         description:
-          "Etkileşimli siber güvenlik öğrenme platformu (video kurslar, quiz akışları, CTF tarzı görevler). Bileşen mimarisi, sayfa düzenleri ve temel UI kitinin kurulumu/evrimi."
+          "Etkileşimli siber güvenlik öğrenme platformu (video kurslar, quiz akışları, CTF tarzı görevler, Chat). Bileşen mimarisi, sayfa düzenleri ve temel UI kitinin kurulumu/evrimi.",
       },
       {
         name: "Privia Hub v2",
+        website: "https://priviahub.com",
         description:
-          "Mevcut modüllerin modernizasyonu; tablo/list görünümleri, filtreleme ve form akışlarında DX/UX iyileştirmeleri."
+          "Mevcut modüllerin modernizasyonu; tablo/list görünümleri, filtreleme ve form akışlarında DX/UX iyileştirmeleri.",
       },
       {
         name: "PMap",
+        website: "https://pmap.io",
         description:
-          "Çok katmanlı organizasyon yapılarında çoklu pentest süreçlerinin yönetimi. Her iştirak için bağımsız projeler ve ayrı ayrı yönetim; proje/katman bazlı görünürlük ekranları, süreç haritaları ve durum göstergeleri geliştirdim."
+          "Çok katmanlı organizasyon yapılarında çoklu pentest süreçlerinin yönetimi için bir Dashboard Projesi. Her iştirak için bağımsız projeler ve ayrı ayrı yönetim; proje/katman bazlı görünürlük ekranları, süreç haritaları ve durum göstergeleri geliştirdim.",
       },
-      {
-        name: "Harpoon X",
-        description:
-          "Siber operasyonlar ve tehdit görselleştirme için ileri seviye arayüz; yoğun veri görselleri, operatör verimliliğine yönelik kısayollar ve etkileşimler."
-      }
     ],
-    realtimeNote:
-      "Görev ilerlemeleri, bildirimler ve eş-zamanlı UI güncellemeleri için WebSocket tabanlı iletişim (backend’de Gorilla WebSocket; frontend’de canlı durum yönetimi ve optimistic UI).",
+
     tech: [
       "React",
       "Next.js",
       "TypeScript",
       "Material UI",
       "Tailwind CSS",
+      "Scss",
+      "HTML5 • CSS3",
+      "JavaScript (ES6+)",
       "Redux",
+      "React Query",
+      "Formik • Yup",
+      "React Hook Form",
+      "React Flow",
       "Redux Toolkit",
       "Context API",
       "SWR",
@@ -49,7 +52,7 @@ export const EXPERIENCES: Experience[] = [
       "Framer Motion",
       "REST",
       "WebSocket",
-      "GitLab • CI/CD"
-    ]
-  }
+      "GitLab • CI/CD",
+    ],
+  },
 ];
