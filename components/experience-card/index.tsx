@@ -24,7 +24,7 @@ export type Experience = {
 export function ExperienceCard({ exp }: { exp: Experience }) {
   return (
     <article
-      key={exp.company}
+      key={exp?.company}
       className="
         min-w-full md:min-w-[720px] md:max-w-3xl 
         snap-center shrink-0 rounded-3xl border border-white/10 

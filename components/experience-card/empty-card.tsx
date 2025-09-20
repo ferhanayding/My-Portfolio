@@ -2,25 +2,48 @@
 import React, { useCallback, useState } from "react";
 import { Mail } from "lucide-react";
 
-const EMAIL = "ferhanaydin099@gmail.com";
-const SUBJECT = "İşbirliği%20Talebi";
+type CtaCardProps = {
+  email?: string;
+  subject?: string; // düz metin ver; ben encode edeceğim
+  title?: string;
+  subtitle?: string;
+  badge?: string;
+  body?: string;
+  buttonAriaLabel?: string;
+  copiedText?: string;
+  note?: string;
+};
 
-export function CtaCard() {
+export function CtaCard({
+  email = "ferhanaydin099@gmail.com",
+  subject = "Collaboration Request",
+  title = "Want to fill this space?",
+  subtitle = "Just one project for now — but the second card could be yours. 😄",
+  badge = "Open Invite",
+  body = "There’s room here for new collaborations. Get in touch for modern, performance-focused UIs that add real value to your project.",
+  buttonAriaLabel = "Contact via email",
+  copiedText = "If your mail client didn’t open, the address was copied to your clipboard ✅",
+  note = "Note: Clicking attempts to open your default mail client; if it can’t, the address is copied automatically.",
+}: CtaCardProps) {
   const [copied, setCopied] = useState(false);
 
   const onMailClick = useCallback(async () => {
-    const mailto = `mailto:${EMAIL}?subject=${SUBJECT}`;
-    const w = window.open(mailto, "_self");
+    const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    if (typeof window !== "undefined") {
+      window.location.href = mailto;
+    }
     setTimeout(async () => {
       try {
-        await navigator.clipboard.writeText(EMAIL);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2500);
+        if (navigator?.clipboard?.writeText) {
+          await navigator.clipboard.writeText(email);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2500);
+        }
       } catch {
-        window.location.href = mailto;
+        // yok say: bazı tarayıcılarda izin çıkabilir
       }
-    }, 300);
-  }, []);
+    }, 250);
+  }, [email, subject]);
 
   return (
     <article
@@ -39,14 +62,12 @@ export function CtaCard() {
       >
         <div className="space-y-1">
           <h3 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tight">
-            Burayı Doldurmak İster misiniz?
+            {title}
           </h3>
-          <p className="text-xs sm:text-sm text-zinc-400">
-            “Şimdilik tek iş — ama ikinci kartı sizinle doldurabiliriz.” 😄
-          </p>
+          <p className="text-xs sm:text-sm text-zinc-400">{subtitle}</p>
         </div>
         <span className="self-start md:self-auto text-[10px] sm:text-[11px] md:text-xs rounded-full px-2.5 md:px-3 py-1 border border-white/15 bg-white/5 text-zinc-300 whitespace-nowrap">
-          Açık Davet
+          {badge}
         </span>
       </header>
 
@@ -56,14 +77,13 @@ export function CtaCard() {
 
       <section className="p-4 sm:p-5 md:p-6 pt-3 md:pt-4 space-y-4">
         <p className="text-[13px] sm:text-sm md:text-[15px] leading-relaxed text-zinc-300">
-          Bu alanda yeni işbirliklerine yer var. Projenize değer katacak, modern
-          ve performans odaklı arayüzler için iletişime geçin.
+          {body}
         </p>
 
         <button
           type="button"
           onClick={onMailClick}
-          aria-label="E-posta ile iletişim kur"
+          aria-label={buttonAriaLabel}
           className="
             group mt-2 inline-flex items-center gap-3 rounded-2xl border border-white/15 bg-white/5 
             px-5 py-4 text-base font-medium tracking-tight hover:bg-white/10 transition
@@ -80,19 +100,12 @@ export function CtaCard() {
           >
             <Mail className="h-5 w-5" />
           </span>
-          <span className="text-sm sm:text-xl break-all">{EMAIL}</span>
+          <span className="text-sm sm:text-xl break-all">{email}</span>
         </button>
 
-        {copied && (
-          <p className="text-xs text-emerald-300/90">
-            Mail uygulaması açılamadıysa adres panoya kopyalandı ✅
-          </p>
-        )}
+        {copied && <p className="text-xs text-emerald-300/90">{copiedText}</p>}
 
-        <p className="text-[11px] sm:text-xs text-zinc-400">
-          Not: Tıklayınca e-posta istemciniz açılır; açılamazsa adresi otomatik
-          kopyalar.
-        </p>
+        <p className="text-[11px] sm:text-xs text-zinc-400">{note}</p>
       </section>
     </article>
   );
