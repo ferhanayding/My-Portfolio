@@ -30,8 +30,8 @@ export default function Hero({}: Props) {
         <h2 className="text-sm uppercase ml-4 text-gray-500  pb-2 tracking-[7px] md:tracking-[15px]">
           Software Engineer
         </h2>
-        <h1 className="text-3xl lg:text-4xl font-semibold px-10">
-          <span className="mr-3 text-primary/70">{text}</span>
+        <h1 className="text-base lg:text-4xl font-semibold ">
+          <span className=" text-primary/70">{text}</span>
           <Cursor cursorColor="#f7ab0a" />
         </h1>
         <div className="mt-20 hidden sm:block ">
@@ -49,7 +49,7 @@ export default function Hero({}: Props) {
           </HashLink>
         </div>
       </div>
-       <Divider className="bg-primary/50" />
+       <Divider className="bg-primary/30" />
     </div>
   );
 }

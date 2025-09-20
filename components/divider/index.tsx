@@ -12,7 +12,7 @@ const Divider: React.FC<DividerProps> = ({
   const yPos = "bottom-0";
   const leftRotate = inverted ? "-rotate-1" : "rotate-1";
   const rightRotate = inverted ? "rotate-1" : "-rotate-1";
-  const baseBar = `absolute ${yPos} h-[2px] w-[50%] bg-gray-600 z-40`;
+  const baseBar = `absolute ${yPos} h-[2px] w-[50%] bg-gray-700 z-40`;
 
   return (
     <div className="md:block hidden ">

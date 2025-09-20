@@ -194,9 +194,9 @@ export default function MyProjects() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-col justify-end items-end gap-2">
                   {it.state && (
-                    <span className="text-[10px] uppercase tracking-wider rounded-full px-2 py-0.5 border border-white/20 bg-black/40 backdrop-blur text-zinc-200">
+                    <span className="text-[10px] uppercase tracking-wider max-w-max rounded-full px-auto px-2  py-1 border border-white/20 bg-black/40 backdrop-blur text-zinc-200">
                       {it.state}
                     </span>
                   )}
@@ -260,8 +260,8 @@ export default function MyProjects() {
           );
         })}
       </div>
-       
-        <Divider inverted />
+
+      <Divider inverted />
     </div>
   );
 }
