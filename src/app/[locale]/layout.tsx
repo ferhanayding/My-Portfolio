@@ -4,13 +4,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import Header from "../components/header";
-import SocialDropdownMobile from "../components/mobile-header";
+import { MobileHeader } from "../components/mobile-header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "My Portfolio",
-  description: "Ferhan Aydın – Frontend Developer",
+  description: "Ferhan Aydın – Frontend Developer | Software Developer",
 };
 
 export default async function RootLayout({
@@ -37,7 +37,7 @@ export default async function RootLayout({
             <Header locale={locale} />
           </div>
           <div className="md:hidden block relative">
-            <SocialDropdownMobile  locale={locale}/>
+            <MobileHeader locale={locale} />
           </div>
           {children}
         </NextIntlClientProvider>

@@ -1,42 +1,11 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { GBFlag, TRFlag } from "../mobile-header";
 
 type Loc = "tr" | "en";
 
-function TRFlag(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 60 40" width="28" height="18" {...props} aria-hidden>
-      <rect width="60" height="40" fill="#E30A17" />
-      <circle cx="25" cy="20" r="9" fill="#fff" />
-      <circle cx="28" cy="20" r="7" fill="#E30A17" />
-      <path
-        d="M35.5 20l6.5 2.1-4-5.6v7l4-5.6-6.5 2.1z"
-        fill="#fff"
-        transform="translate(-2,0)"
-      />
-    </svg>
-  );
-}
 
-function GBFlag(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 60 40" width="28" height="18" {...props} aria-hidden>
-      <clipPath id="c">
-        <rect width="60" height="40" rx="3" />
-      </clipPath>
-      <g clipPath="url(#c)">
-        <rect width="60" height="40" fill="#012169" />
-        <path d="M0,0 60,40 M60,0 0,40" stroke="#fff" strokeWidth="8" />
-        <path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" strokeWidth="4" />
-        <rect x="26" width="8" height="40" fill="#fff" />
-        <rect y="16" width="60" height="8" fill="#fff" />
-        <rect x="28" width="4" height="40" fill="#C8102E" />
-        <rect y="18" width="60" height="4" fill="#C8102E" />
-      </g>
-    </svg>
-  );
-}
 
 export default function LocaleSwitcher({ current }: { current: Loc }) {
   const pathname = usePathname() || "/";
@@ -137,9 +106,9 @@ export default function LocaleSwitcher({ current }: { current: Loc }) {
             }
           }}
           className={[
-            "inline-flex items-center justify-center rounded-2xl border px-2.5 py-1.5",
-            "border-white/15 bg-white/5 hover:bg-white/10",
-            "transition focus:outline-none focus:ring-2 focus:ring-white/20",
+            "inline-flex items-center justify-center rounded-2xl  px-2.5 py-1.5",
+            " bg-transparent hover:bg-white/10 transition",
+
             pending ? "opacity-80" : "",
             open
               ? "ring-1 ring-white/30 shadow-[0_0_24px_-10px_rgba(255,255,255,0.5)]"

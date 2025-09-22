@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 export function CtaCard() {
   const t = useTranslations("cta");
 
-  // sabit değerler (ihtiyaç olursa i18n'e de alabiliriz)
   const email = "ferhanaydin099@gmail.com";
   const subject = t("subject");
 
@@ -15,10 +14,8 @@ export function CtaCard() {
   const onMailClick = useCallback(async () => {
     const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
     if (typeof window !== "undefined") {
-      // mailto dene
       window.location.href = mailto;
     }
-    // kısa gecikme ardından kopyalama fallback'i
     setTimeout(async () => {
       try {
         if (navigator?.clipboard?.writeText) {
@@ -26,9 +23,7 @@ export function CtaCard() {
           setCopied(true);
           setTimeout(() => setCopied(false), 2500);
         }
-      } catch {
-        // sessiz geç
-      }
+      } catch {}
     }, 250);
   }, [email, subject]);
 

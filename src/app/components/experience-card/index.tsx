@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 export type Project = {
@@ -55,14 +56,14 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
               {exp.location}
               {exp.location && exp.website ? " • " : ""}
               {exp.website && (
-                <a
+                <Link
                   className="underline underline-offset-4 hover:no-underline"
                   href={exp.website}
                   target="_blank"
                   rel="noreferrer"
                 >
                   {new URL(exp.website).host}
-                </a>
+                </Link>
               )}
             </p>
           )}
@@ -91,14 +92,14 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
               <div className="min-w-0">
                 <span className="font-medium">
                   {p.website ? (
-                    <a
+                    <Link
                       href={p.website}
                       target="_blank"
                       rel="noreferrer"
                       className="underline underline-offset-4 hover:no-underline"
                     >
                       {p.name}
-                    </a>
+                    </Link>
                   ) : (
                     p.name
                   )}

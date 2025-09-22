@@ -38,18 +38,18 @@ export default function Hero({}: Props) {
           <span className=" text-primary/70">{text}</span>
           <Cursor cursorColor="#f7ab0a" />
         </h1>
-        <div className="mt-20 hidden sm:block ">
+        <div className="sm:mt-20 mt-5 grid sm:grid-cols-4  grid-cols-2  ">
           <HashLink href="/#about">
-            <button className="heroButton">{t("nav.about")}</button>
+            <button className="heroButton group">{t("nav.about")}</button>
           </HashLink>
           <HashLink href="/#experience">
-            <button className="heroButton">{t("nav.experience")}</button>
+            <button className="heroButton group">{t("nav.experience")}</button>
           </HashLink>
           <HashLink href="/#skills">
-            <button className="heroButton">{t("nav.skills")}</button>
+            <button className="heroButton group">{t("nav.skills")}</button>
           </HashLink>
           <HashLink href="/#projects">
-            <button className="heroButton">{t("nav.projects")}</button>
+            <button className="heroButton group">{t("nav.projects")}</button>
           </HashLink>
         </div>
       </div>

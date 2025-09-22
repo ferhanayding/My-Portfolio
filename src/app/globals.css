@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm  tracking-widest
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase sm:text-sm text-xs tracking-widest
      text-gray-500 transition-all hover:border-primary/40 hover:text-primary;
   }
 }
@@ -26,11 +26,11 @@
 }
 
 .fancy-scrollbar {
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
 }
 .fancy-scrollbar::-webkit-scrollbar {
-  height: 10px; 
+  height: 10px;
 }
 .fancy-scrollbar::-webkit-scrollbar-track {
   background: transparent;
@@ -42,7 +42,7 @@
     rgba(255, 255, 255, 0.28)
   );
   border-radius: 9999px;
-  border: 3px solid rgba(0, 0, 0, 0); 
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 .fancy-scrollbar::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(

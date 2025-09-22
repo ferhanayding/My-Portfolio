@@ -158,14 +158,14 @@ export default function MyProjects() {
         <Title title={t("title")} desc={t("desc")} />
         <p className="mt-3 text-sm text-gray-300">
           {t("morePrefix")}{" "}
-          <a
+          <Link
             href="https://github.com/ferhanayding"
             target="_blank"
             rel="noreferrer"
             className="underline decoration-dotted hover:opacity-80"
           >
             github.com/ferhanayding
-          </a>
+          </Link>
         </p>
       </div>
 

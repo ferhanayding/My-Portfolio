@@ -6,7 +6,7 @@ import LocaleSwitcher from "../locale-switcher";
 import { useTranslations } from "next-intl";
 
 export default function Header({ locale }: { locale: "tr" | "en" }) {
-    const t = useTranslations("header");
+  const t = useTranslations("header");
 
   return (
     <header
@@ -81,7 +81,7 @@ export default function Header({ locale }: { locale: "tr" | "en" }) {
           bgColor="transparent"
         />
         <p className="uppercase hidden md:inline-flex text-gray-400">
-           {t("getInTouch")}
+          {t("getInTouch")}
         </p>
       </motion.div>
     </header>
