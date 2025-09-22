@@ -14,7 +14,7 @@
     "heading": "Here is a little background",
     "body": "I began my software journey in 2021 by building on the knowledge I gained at school, and in 2022 I took my first professional step into the industry at Privia Security. Over the past 3 years, I have gained solid experience in frontend development, creating user-focused, high-performance, and scalable web applications. Throughout this journey, I have not only written code but also focused on solving complex problems, researching and applying new technologies, and working harmoniously within teams. My goal in every project has been to deliver sustainable solutions that combine functionality with a refined user experience. Today, as a frontend developer driven by continuous learning and growth, I am always ready to take on new challenges, develop creative solutions, and bring value to every project I contribute to."
   },
-   "cta": {
+  "cta": {
     "subject": "Collaboration Request",
     "title": "Want to fill this space?",
     "subtitle": "Just one project for now — but the second card could be yours. 😄",
@@ -23,12 +23,14 @@
     "buttonAriaLabel": "Contact via email",
     "copiedText": "If your mail client didn’t open, the address was copied to your clipboard ✅",
     "note": "Note: Clicking attempts to open your default mail client; if it can’t, the address is copied automatically."
-  },  "projects": {
+  },
+  "projects": {
     "title": "Projects",
     "desc": "During my hobby and internship period, as well as some freelance work I did on Bionluk, I deployed a few of the projects to a test environment. Here you can see some of them.",
     "morePrefix": "For more,",
     "urlMissing": "URL not found",
     "open": "Open",
     "live": "LIVE"
-  }
+  },
+  "loading": "LOADING..."
 }

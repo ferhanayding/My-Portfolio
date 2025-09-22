@@ -15,6 +15,7 @@ import {
   SiHtml5,
   SiTailwindcss,
 } from "react-icons/si";
+import { useTranslations } from "next-intl";
 
 type SkillIcon = { el: React.ReactElement; color: string; label: string };
 
@@ -42,6 +43,7 @@ export default function Loading({
   showLabel?: boolean;
 }) {
   const [i, setI] = useState(0);
+  const t = useTranslations();
 
   useEffect(() => {
     const id = setInterval(
@@ -81,7 +83,9 @@ export default function Loading({
 
         {showLabel && (
           <div className="text-center">
-            <div className="text-sm tracking-widest text-white/70">LOADING</div>
+            <div className="text-sm tracking-widest text-white/70">
+              {t("loading")}
+            </div>
             <div className="text-lg sm:text-xl font-semibold text-white/90">
               {current.label}
             </div>

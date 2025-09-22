@@ -10,7 +10,7 @@ export default function Header({ locale }: { locale: "tr" | "en" }) {
 
   return (
     <header
-      className="fixed left-0 bg-transparent right-0 w-full  top-0 z-50 flex p-5 pb-0 
+      className="fixed left-0 bg-transparent  right-0 w-full  top-0 z-50 flex p-5 pb-0 
        items-center justify-between max-w-7xl mx-auto  xl:items-center"
     >
       <motion.div
