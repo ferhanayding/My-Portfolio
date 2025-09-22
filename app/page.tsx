@@ -1,11 +1,9 @@
-import Divider from "@/components/divider";
-import Header from "@/components/header";
-import About from "@/sections/about";
-import Contact from "@/sections/contact";
-import Hero from "@/sections/hero";
-import MyProjects from "@/sections/projects";
-import Skills from "@/sections/skills";
-import WorkExperience from "@/sections/work-experience";
+import Header from "@/app/components/header";
+import About from "@/app/sections/about";
+import Hero from "@/app/sections/hero";
+import MyProjects from "@/app/sections/projects";
+import Skills from "@/app/sections/skills";
+import WorkExperience from "@/app/sections/work-experience";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,19 +17,15 @@ export default function Home() {
       <Header />
       <section id="hero" className=" relative">
         <Hero />
-    
       </section>
       <section id="about" className="scroll-mt-[72px] relative">
         <About />
-       
       </section>
       <section id="experience" className="scroll-mt-[72px] relative">
         <WorkExperience />
-       
       </section>
       <section id="projects" className="scroll-mt-[72px] relative">
         <MyProjects />
-     
       </section>
       <section id="skills" className="scroll-mt-[72px] relative">
         <Skills />

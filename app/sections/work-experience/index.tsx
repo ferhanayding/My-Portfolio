@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { EXPERIENCES } from "@/data/experience";
 import { ExperienceCard } from "../../components/experience-card";
 import { CtaCard } from "../../components/experience-card/empty-card";
-import Divider from "@/components/divider";
+import Divider from "@/app/components/divider";
 
 export default function WorkExperience() {
   const railRef = useRef<HTMLDivElement>(null);

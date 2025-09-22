@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Loading from "@/components/loading";
+import Loading from "@/app/components/loading";
 import Link from "next/link";
-import Title from "@/components/title";
-import Divider from "@/components/divider";
+import Title from "@/app/components/title";
+import Divider from "@/app/components/divider";
 
 type VercelProject = {
   id: string;

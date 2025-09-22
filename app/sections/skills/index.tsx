@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { motion } from "framer-motion";
+"use client";
+import React, { JSX } from "react";
 import Title from "../../components/title";
 import { TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaSass } from "react-icons/fa";
@@ -193,18 +193,15 @@ const data: SkillData[] = [
 
 export default function Skills({}: Props) {
   return (
-    <motion.div
-      className="
-      max-w-6xl overflow-hidden text-left p-10 my-auto  mx-auto"
-    >
+    <div className="max-w-6xl overflow-hidden text-left p-10 my-auto  mx-auto">
       <div className="text-center mb-10">
-        <Title title="skills" />
+        <Title title="skılls" />
       </div>
       <div className="grid grid-cols-3  md:grid-cols-9 gap-5 ">
-        {data.map((SkillData) => (
-          <SkillItem data={SkillData} />
+        {data.map((item, index) => (
+          <SkillItem key={index} data={item} />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

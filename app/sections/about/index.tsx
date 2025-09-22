@@ -1,7 +1,8 @@
+"use client"
 import React from "react";
 import { motion } from "framer-motion";
 import Title from "../../components/title";
-import Divider from "@/components/divider";
+import Divider from "@/app/components/divider";
 
 type Props = {};
 

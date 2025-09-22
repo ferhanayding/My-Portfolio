@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { motion } from "framer-motion";
 type Props = {};
@@ -15,8 +17,8 @@ export default function BackgroundCircles({}: Props) {
       className="flex relative justify-center items-center"
     >
       <div className="absolute border border-primary/40 rounded-full h-[150px] w-[150px] mt-52 animate-ping " />
-      <div className="absolute border border-secondry rounded-full h-[250px] w-[250px] mt-52 " />
-      <div className="absolute border hidden sm:block border-secondry rounded-full h-[350px] w-[350px] mt-52 " />
+      <div className="absolute border border-secondary rounded-full h-[250px] w-[250px] mt-52 " />
+      <div className="absolute border hidden sm:block border-secondary rounded-full h-[350px] w-[350px] mt-52 " />
       <div className="absolute border hidden sm:block border-primary opacity-20 rounded-full h-[450px] w-[450px] mt-52 animate-pulse " />
     </motion.div>
   );

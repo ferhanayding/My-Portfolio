@@ -1,8 +1,9 @@
+"use client"
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "../../components/background-circles";
 import HashLink from "../../components/hash-link";
-import Divider from "@/components/divider";
+import Divider from "@/app/components/divider";
 
 type Props = {};
 
