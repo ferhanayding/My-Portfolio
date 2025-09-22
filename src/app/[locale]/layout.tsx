@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import Header from "../components/header";
 import { MobileHeader } from "../components/mobile-header";
+import BackToTop from "../components/back-to-drop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default async function RootLayout({
             <MobileHeader locale={locale} />
           </div>
           {children}
+             <BackToTop />
         </NextIntlClientProvider>
       </body>
     </html>

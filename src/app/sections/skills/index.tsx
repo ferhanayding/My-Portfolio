@@ -25,6 +25,7 @@ import {
 import { TbApi, TbNetwork, TbTopologyStar3, TbShare3 } from "react-icons/tb";
 import SkillItem from "../../components/skill-item";
 import { useTranslations } from "next-intl";
+import Divider from "../../components/divider";
 type Props = {};
 type SkillData = {
   directionLeft: boolean;
@@ -204,6 +205,7 @@ export default function Skills({}: Props) {
           <SkillItem key={index} data={item} />
         ))}
       </div>
+      <Divider className="bg-primary/60" />
     </div>
   );
 }

@@ -32,5 +32,26 @@
     "open": "Open",
     "live": "LIVE"
   },
-  "loading": "LOADING..."
+  "loading": "LOADING...",
+  "education": {
+    "title": "University",
+    "subtitle": "A journey tempered by the Black Sea breeze",
+    "uni": {
+      "name": "Karadeniz Technical University",
+      "program": "Statistics & Computer Sciences",
+      "level": "Bachelor’s",
+      "location": "Trabzon",
+      "years": "2017 → 2024",
+      "note": "Graduation took a bit longer; every time I returned, I added a new feature—suddenly the thesis became an LTS release. 😄"
+    },
+    "hs": {
+      "title": "High School",
+      "subtitle": "Where the foundation was laid",
+      "name": "Baku Turkish Anatolian High School",
+      "department": "General High School",
+      "location": "Baku",
+      "years": "2013 → 2017",
+      "note": "A mix of Baku winds and early study hours—great endurance training. The diploma came with plenty of memories. 🎓"
+    }
+  }
 }

@@ -5,6 +5,7 @@ import About from "../sections/about";
 import MyProjects from "../sections/projects";
 import WorkExperience from "../sections/work-experience";
 import Skills from "../sections/skills";
+import Education from "../sections/education";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,10 +32,10 @@ export default function Home() {
       <section id="skills" className="scroll-mt-[72px] relative">
         <Skills />
       </section>
-      {/* <section id="contact" className="scroll-mt-[72px] relative">
-        <Contact />
-        <Divider inverted />
-      </section> */}
+      <section id="skills" className="scroll-mt-[72px] relative">
+        <Education />
+      </section>
+    
     </main>
   );
 }

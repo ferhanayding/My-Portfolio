@@ -33,5 +33,26 @@
     "open": "Aç",
     "live": "YAYINDA"
   },
-  "loading": "YÜKLENİYOR..."
+  "loading": "YÜKLENİYOR...",
+  "education": {
+    "title": "Üniversite",
+    "subtitle": "Karadeniz’in rüzgârıyla pişen bir yolculuk",
+    "uni": {
+      "name": "Karadeniz Teknik Üniversitesi",
+      "program": "İstatistik ve Bilgisayar Bilimleri",
+      "level": "Lisans",
+      "location": "Trabzon",
+      "years": "2017 → 2024",
+      "note": "Mezuniyet biraz uzun sürdü; her dönüşte projeye yeni bir özellik ekleyince, tez bir anda LTS sürümüne dönüştü. 😄"
+    },
+    "hs": {
+      "title": "Lise",
+      "subtitle": "Temelin atıldığı yıllar",
+      "name": "Bakü Türk Anadolu Lisesi",
+      "department": "Genel Lise",
+      "location": "Bakü",
+      "years": "2013 → 2017",
+      "note": "Bakü rüzgârı + sabah etütleri = dayanıklılık eğitimi. Diplomanın yanında güzel anılar da birikti. 🎓"
+    }
+  }
 }
