@@ -1,4 +1,3 @@
-// app/[locale]/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
@@ -18,19 +17,20 @@ export default async function RootLayout({
   params
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: 'tr' | 'en' }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: raw } = await params;
+
+  const locale = (['tr', 'en'] as const).includes(raw as any) ? (raw as 'tr' | 'en') : 'tr';
 
   setRequestLocale(locale);
-
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <body className={`${inter.className} bg-mainColor text-white`}>
         <NextIntlClientProvider messages={messages}>
-        <Header locale={locale} />
+          <Header locale={locale} />
           {children}
         </NextIntlClientProvider>
       </body>
