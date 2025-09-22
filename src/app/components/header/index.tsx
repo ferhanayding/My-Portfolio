@@ -2,9 +2,12 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-type Props = {};
+import LocaleSwitcher from "../locale-switcher";
+import { useTranslations } from "next-intl";
 
-export default function Header({}: Props) {
+export default function Header({ locale }: { locale: "tr" | "en" }) {
+    const t = useTranslations("header");
+
   return (
     <header
       className="fixed left-0 bg-transparent right-0 w-full  top-0 z-50 flex p-5 pb-0 
@@ -69,6 +72,7 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row  items-center text-gray-300 cursor-pointer"
       >
+        <LocaleSwitcher current={locale} />
         <SocialIcon
           url="mailto:ferhanaydin099@gmail.com"
           className="cursor-pointer"
@@ -77,7 +81,7 @@ export default function Header({}: Props) {
           bgColor="transparent"
         />
         <p className="uppercase hidden md:inline-flex text-gray-400">
-          Get In Touch
+           {t("getInTouch")}
         </p>
       </motion.div>
     </header>

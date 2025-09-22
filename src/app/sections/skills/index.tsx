@@ -24,6 +24,7 @@ import {
 } from "react-icons/si";
 import { TbApi, TbNetwork, TbTopologyStar3, TbShare3 } from "react-icons/tb";
 import SkillItem from "../../components/skill-item";
+import { useTranslations } from "next-intl";
 type Props = {};
 type SkillData = {
   directionLeft: boolean;
@@ -192,10 +193,11 @@ const data: SkillData[] = [
 ];
 
 export default function Skills({}: Props) {
+  const t = useTranslations("nav")
   return (
     <div className="max-w-6xl overflow-hidden text-left p-10 my-auto  mx-auto">
       <div className="text-center mb-10">
-        <Title title="skılls" />
+        <Title title={t("skills")} />
       </div>
       <div className="grid grid-cols-3  md:grid-cols-9 gap-5 ">
         {data.map((item, index) => (

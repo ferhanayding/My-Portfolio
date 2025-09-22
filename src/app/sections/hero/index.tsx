@@ -3,11 +3,14 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "../../components/background-circles";
 import HashLink from "../../components/hash-link";
-import Divider from "@/app/components/divider";
+import Divider from "../../components/divider";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 export default function Hero({}: Props) {
+  const t = useTranslations();
+
   const [text, count] = useTypewriter({
     words: [
       "Hi, I'm Ferhan👋",
@@ -29,24 +32,24 @@ export default function Hero({}: Props) {
       />
       <div className="z-10">
         <h2 className="text-sm uppercase ml-4 text-gray-500  pb-2 tracking-[7px] md:tracking-[15px]">
-          Software Engineer
+          {t("nav.softwareDev")}
         </h2>
-        <h1 className="text-base lg:text-4xl font-semibold ">
+        <h1 className="text-base lg:text-2xl font-semibold ">
           <span className=" text-primary/70">{text}</span>
           <Cursor cursorColor="#f7ab0a" />
         </h1>
         <div className="mt-20 hidden sm:block ">
           <HashLink href="/#about">
-            <button className="heroButton">About</button>
+            <button className="heroButton">{t("nav.about")}</button>
           </HashLink>
           <HashLink href="/#experience">
-            <button className="heroButton">Experience</button>
+            <button className="heroButton">{t("nav.experience")}</button>
           </HashLink>
           <HashLink href="/#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton">{t("nav.skills")}</button>
           </HashLink>
           <HashLink href="/#projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton">{t("nav.projects")}</button>
           </HashLink>
         </div>
       </div>

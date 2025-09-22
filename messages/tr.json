@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "experience": "Deneyimim",
+    "skills": "Yeteneklerim",
+    "projects": "Projelerim",
+    "softwareDev": "Yazılım Geliştirici"
+  },
+  "hero": { "title": "Merhaba Ferhan!" },
+  "header": {
+    "getInTouch": "İletişime Geç"
+  },
+  "about": {
+    "heading": "Kısaca Ben",
+    "body": "Yazılım yolculuğuma 2021’de okulda edindiğim bilgileri sağlamlaştırarak başladım; 2022’de ise Privia Security’de sektöre ilk profesyonel adımımı attım. Son 3 yılda, kullanıcı odaklı, yüksek performanslı ve ölçeklenebilir web uygulamaları geliştirerek frontend alanında güçlü bir deneyim kazandım. Bu süreçte sadece kod yazmakla kalmayıp, karmaşık problemleri çözmeye, yeni teknolojileri araştırıp uygulamaya ve ekip içinde uyumla çalışmaya odaklandım. Her projede amacım, işlevselliği rafine bir kullanıcı deneyimiyle birleştiren sürdürülebilir çözümler sunmak oldu. Bugün de sürekli öğrenme ve gelişim motivasyonuyla, yeni zorlukları üstlenmeye, yaratıcı çözümler üretmeye ve katkı sağladığım her projeye değer katmaya hazırım."
+  },
+  "cta": {
+    "subject": "İş Birliği Talebi",
+    "title": "Bu alanı doldurmak ister misin?",
+    "subtitle": "Şimdilik tek iş yeri görünüyor — ikinci kart senin olabilir. 😄",
+    "badge": "Açık Davet",
+    "body": "Yeni iş birliklerine alan var. Projene gerçek değer katacak, modern ve performans odaklı arayüzler için iletişime geç.",
+    "buttonAriaLabel": "E-posta ile iletişim",
+    "copiedText": "E-posta uygulaması açılmadıysa adres panoya kopyalandı ✅",
+    "note": "Not: Tıklama varsayılan e-posta istemcisini açmayı dener; açılamazsa adres otomatik kopyalanır."
+  },
+  "projects": {
+    "title": "Projeler",
+    "desc": "Hobi ve staj dönemimde, ayrıca Bionluk’ta yaptığım bazı freelance işlerde projelerimin bir kısmını test ortamına deploy ettim. Burada bazılarını görebilirsin.",
+    "morePrefix": "Daha fazlası için,",
+    "urlMissing": "URL bulunamadı",
+    "open": "Aç",
+    "live": "YAYINDA"
+  }
+}

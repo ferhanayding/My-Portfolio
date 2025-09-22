@@ -1,10 +1,11 @@
-import Header from "@/app/components/header";
-import About from "@/app/sections/about";
-import Hero from "@/app/sections/hero";
-import MyProjects from "@/app/sections/projects";
-import Skills from "@/app/sections/skills";
-import WorkExperience from "@/app/sections/work-experience";
 import { Inter } from "next/font/google";
+import Header from "../components/header";
+import Hero from "../sections/hero";
+import About from "../sections/about";
+import MyProjects from "../sections/projects";
+import WorkExperience from "../sections/work-experience";
+import Skills from "../sections/skills";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export default function Home() {
       className={` ${inter.className} bg-mainColor
        text-white z-0 overflow-x-hidden scroll-smooth`}
     >
-      <Header />
+     
       <section id="hero" className=" relative">
         <Hero />
       </section>

@@ -1,6 +1,6 @@
-import { Experience } from "@/app/components/experience-card";
+import { Experience } from "@/src/app/components/experience-card";
 
-export const EXPERIENCES: Experience[] = [
+export const EXPERIENCES_EN: Experience[] = [
   {
     company: "Privia Security",
     role: "Frontend Developer",

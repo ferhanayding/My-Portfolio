@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Loading from "@/app/components/loading";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import Title from "@/app/components/title";
-import Divider from "@/app/components/divider";
+import Divider from "../../components/divider";
+import Loading from "../../components/loading";
+import Title from "../../components/title";
+import { useLocale, useTranslations } from "next-intl";
 
 type VercelProject = {
   id: string;
@@ -97,6 +98,20 @@ export default function MyProjects() {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const locale = useLocale(); // 'tr' | 'en'
+  const t = useTranslations("projects"); // i18n metinleri
+
+  // Yerel tarih biçimi
+  const fmt = useMemo(
+    () =>
+      new Intl.DateTimeFormat(locale, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+      }),
+    [locale]
+  );
+
   useEffect(() => {
     (async () => {
       try {
@@ -138,14 +153,11 @@ export default function MyProjects() {
   if (loading) return <Loading />;
 
   return (
-    <div className="md:min-h-screen max-w-6xl mx-auto px-6 sm:px-10 py-10 ">
-      <div className="text-center mb-10 ">
-        <Title
-          title="Projects"
-          desc="During my hobby and internship period, as well as some freelance work I did on Bionluk, I deployed a few of the projects to a test environment. Here you can see some of them."
-        />
+    <div className="md:min-h-screen max-w-6xl mx-auto px-6 sm:px-10 py-10">
+      <div className="text-center mb-10">
+        <Title title={t("title")} desc={t("desc")} />
         <p className="mt-3 text-sm text-gray-300">
-          For more,{" "}
+          {t("morePrefix")}{" "}
           <a
             href="https://github.com/ferhanayding"
             target="_blank"
@@ -190,13 +202,13 @@ export default function MyProjects() {
                       {it.project}
                     </div>
                     <div className="text-xs text-zinc-400 truncate">
-                      {canOpen ? it.url : "URL bulunamadı"}
+                      {canOpen ? it.url : t("urlMissing")}
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col justify-end items-end gap-2">
                   {it.state && (
-                    <span className="text-[10px] uppercase tracking-wider max-w-max rounded-full px-auto px-2  py-1 border border-white/20 bg-black/40 backdrop-blur text-zinc-200">
+                    <span className="text-[10px] uppercase tracking-wider max-w-max rounded-full px-auto px-2 py-1 border border-white/20 bg-black/40 backdrop-blur text-zinc-200">
                       {it.state}
                     </span>
                   )}
@@ -218,9 +230,7 @@ export default function MyProjects() {
               <div className="px-4 pb-4 pt-1">
                 <div className="flex items-center justify-between text-[11px]">
                   <div className="text-zinc-400">
-                    {it.createdAt
-                      ? new Date(it.createdAt).toLocaleDateString()
-                      : "--"}
+                    {it.createdAt ? fmt.format(new Date(it.createdAt)) : "—"}
                   </div>
                   {it.hasCustomDomain && (
                     <span
@@ -230,7 +240,7 @@ export default function MyProjects() {
                         boxShadow: `0 0 24px -10px ${ring}`,
                       }}
                     >
-                      LIVE
+                      {t("live")}
                     </span>
                   )}
                 </div>
@@ -252,7 +262,7 @@ export default function MyProjects() {
                     {it.host ?? "—"}
                   </div>
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-white/70">
-                    {canOpen ? "Open" : "Url Not Fount"}
+                    {canOpen ? t("open") : t("urlMissing")}
                   </div>
                 </div>
               </div>
