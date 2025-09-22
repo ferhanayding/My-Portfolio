@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 type CtaCardProps = {
   email?: string;
-  subject?: string; // düz metin ver; ben encode edeceğim
+  subject?: string;
   title?: string;
   subtitle?: string;
   badge?: string;
@@ -40,7 +40,6 @@ export function CtaCard({
           setTimeout(() => setCopied(false), 2500);
         }
       } catch {
-        // yok say: bazı tarayıcılarda izin çıkabilir
       }
     }, 250);
   }, [email, subject]);

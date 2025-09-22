@@ -9,7 +9,7 @@ export const EXPERIENCES: Experience[] = [
     start: "Jul 2022",
     end: "Jun 2025",
     summary:
-      "End-to-end frontend development across products in the Privia ecosystem: identity/auth (login–logout, session refresh), authorization-based routing/route guards, responsive layouts and theme management; data-heavy pages with tables, filters, search, sorting, pagination/infinite scroll; card and list views; form flows (React Hook Form/Formik + Yup), validation and comprehensive error handling; loading/skeleton/empty states; transactional email templates; real-time chat and notifications (WebSocket); global state and caching (Redux Toolkit, React Query/SWR); accessibility (ARIA) and performance improvements (lazy loading, code-splitting, memoization). Continuous delivery with CI/CD pipelines and code review.",
+      "I build frontend for the Privia ecosystem across identity/auth (login, logout, session refresh), authorization-aware routing/guards, responsive layouts and theme control. I design data-heavy views with tables, filters, search, sorting, pagination/infinite scroll, plus card and list modes. Forms are handled with React Hook Form/Formik + Yup, with strong validation, error handling, and thoughtful loading/skeleton/empty states. I’ve shipped real-time chat and notifications over WebSocket, manage state and caching with Redux Toolkit and React Query/SWR, and focus on accessibility (ARIA) and performance (lazy loading, code splitting, memoization). Delivery is supported by CI/CD and regular code reviews.",
     projects: [
       {
         name: "Privia Hub v3",

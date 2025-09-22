@@ -8,11 +8,9 @@
      text-gray-500 transition-all hover:border-primary/40 hover:text-primary;
   }
 }
-/* Yatay ray için küçük iyileştirmeler */
 .rail {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  /* kenarlarda hafif fade */
   position: relative;
   mask-image: linear-gradient(
     90deg,
@@ -27,13 +25,12 @@
   user-select: none;
 }
 
-/* Şık, ince ve “glass” uyumlu scrollbar */
 .fancy-scrollbar {
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin; 
   scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
 }
 .fancy-scrollbar::-webkit-scrollbar {
-  height: 10px; /* yatay scroll yüksekliği */
+  height: 10px; 
 }
 .fancy-scrollbar::-webkit-scrollbar-track {
   background: transparent;
@@ -45,7 +42,7 @@
     rgba(255, 255, 255, 0.28)
   );
   border-radius: 9999px;
-  border: 3px solid rgba(0, 0, 0, 0); /* track ile ayrışsın */
+  border: 3px solid rgba(0, 0, 0, 0); 
 }
 .fancy-scrollbar::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(

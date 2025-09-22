@@ -29,7 +29,6 @@ export default function Home() {
       </section>
       <section id="skills" className="scroll-mt-[72px] relative">
         <Skills />
-        {/* <Divider /> */}
       </section>
       {/* <section id="contact" className="scroll-mt-[72px] relative">
         <Contact />

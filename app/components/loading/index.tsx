@@ -2,7 +2,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-// İKONLARINI BURAYA AL: (aynı seti kullanıyoruz)
 import { TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaSass } from "react-icons/fa";
 import { GiOctopus } from "react-icons/gi";

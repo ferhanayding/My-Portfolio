@@ -1,14 +1,7 @@
-// app/api/vercel/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
-// İstersen Node runtime'ı zorla (opsiyonel)
-// export const runtime = "nodejs";
-
-// Caching'i kapatmak istersen (opsiyonel)
-// export const dynamic = "force-dynamic";
-
 export async function GET(_req: NextRequest) {
-  const token = process.env.NEXT_VERCEL_API_TOKEN; // DİKKAT: public prefix YOK
+  const token = process.env.NEXT_VERCEL_API_TOKEN;
   if (!token) {
     return NextResponse.json(
       { error: "Missing VERCEL_API_TOKEN" },
@@ -22,7 +15,6 @@ export async function GET(_req: NextRequest) {
 
   const resp = await fetch(url.toString(), {
     headers: { Authorization: `Bearer ${token}` },
-    // next: { revalidate: 0 }, // istersen fetch cache'ini kapat
   });
 
   if (!resp.ok) {

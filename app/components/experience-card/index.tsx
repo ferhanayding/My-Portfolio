@@ -32,7 +32,6 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
         shadow-[0_8px_40px_-12px_rgba(0,0,0,0.5)] text-zinc-200
       "
     >
-      {/* Header */}
       <header
         className="
           p-4 sm:p-5 md:p-6 pb-2 md:pb-3 
@@ -69,7 +68,6 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
           )}
         </div>
 
-        {/* Tarih rozeti: mobilde başlığın altında görünür */}
         <span className="self-start md:self-auto text-[10px] sm:text-[11px] md:text-xs rounded-full px-2.5 md:px-3 py-1 border border-white/15 bg-white/5 text-zinc-300 whitespace-nowrap">
           {exp.start} – {exp.end}
         </span>
@@ -79,7 +77,6 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
         <hr className="border-white/10" />
       </div>
 
-      {/* Body */}
       <section className="p-4 sm:p-5 md:p-6 pt-3 md:pt-4 space-y-4">
         {exp.summary && (
           <p className="text-[13px] sm:text-sm md:text-[15px] leading-relaxed text-zinc-300">
@@ -87,7 +84,6 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
           </p>
         )}
 
-        {/* Projeler */}
         <ul className="space-y-3 text-[13px] sm:text-sm md:text-[15px] leading-relaxed">
           {exp.projects.map((p) => (
             <li key={p.name} className="flex gap-3">
@@ -113,15 +109,6 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
           ))}
         </ul>
 
-        {/* Realtime / WebSocket notu */}
-        {exp.realtimeNote && (
-          <div className="mt-2 text-[13px] sm:text-sm md:text-[15px] leading-relaxed">
-            <span className="font-medium">Gerçek-zamanlı:</span>{" "}
-            {exp.realtimeNote}
-          </div>
-        )}
-
-        {/* Tech chips */}
         {exp.tech?.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-2">
             {exp.tech.map((t) => (

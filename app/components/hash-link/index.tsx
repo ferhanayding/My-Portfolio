@@ -11,7 +11,6 @@ export default function HashLink({ href, children }: Props) {
     if (el) {
       e.preventDefault();
       el.scrollIntoView({ behavior: "smooth", block: "start" });
-      // odak erişilebilirliği
       (el as HTMLElement).focus?.();
     }
   };

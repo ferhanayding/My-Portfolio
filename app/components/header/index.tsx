@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function Header({}: Props) {
         transition={{
           duration: 1.5,
         }}
-        // className="flex flex-row  items-center"
+        className="flex flex-row items-center"
       >
         <SocialIcon
           url="https://www.linkedin.com/in/ferhan-aydin-6904402b4/"
@@ -67,7 +67,7 @@ export default function Header({}: Props) {
         transition={{
           duration: 1.5,
         }}
-        // className="flex flex-row  items-center text-gray-300 cursor-pointer"
+        className="flex flex-row  items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
           url="mailto:ferhanaydin099@gmail.com"

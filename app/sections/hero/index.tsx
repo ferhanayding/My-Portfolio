@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "../../components/background-circles";
@@ -50,7 +50,7 @@ export default function Hero({}: Props) {
           </HashLink>
         </div>
       </div>
-       <Divider className="bg-primary/30" />
+      <Divider className="bg-primary/30" />
     </div>
   );
 }
