@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Title from "../../components/title";
-import Divider from "../../components/divider";
+import Title from "../../components/ui/title";
+import Divider from "../../components/ui/divider";
 import { useTranslations } from "next-intl";
 
 type Props = {};

@@ -6,7 +6,7 @@ import MyProjects from "../sections/projects";
 import WorkExperience from "../sections/work-experience";
 import Skills from "../sections/skills";
 import Education from "../sections/education";
-
+import NowDoing from "../sections/now-doing";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +16,6 @@ export default function Home() {
       className={` ${inter.className} bg-mainColor
        text-white z-0 overflow-x-hidden scroll-smooth`}
     >
-     
       <section id="hero" className=" relative">
         <Hero />
       </section>
@@ -25,6 +24,9 @@ export default function Home() {
       </section>
       <section id="experience" className="scroll-mt-[72px] relative">
         <WorkExperience />
+      </section>
+      <section id="experience" className="scroll-mt-[72px] relative">
+        <NowDoing />
       </section>
       <section id="projects" className="scroll-mt-[72px] relative">
         <MyProjects />
@@ -35,7 +37,6 @@ export default function Home() {
       <section id="skills" className="scroll-mt-[72px] relative">
         <Education />
       </section>
-    
     </main>
   );
 }

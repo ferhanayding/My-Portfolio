@@ -1,18 +1,38 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import Header from "../components/header";
 import { MobileHeader } from "../components/mobile-header";
-import BackToTop from "../components/back-to-drop";
+import BackToTop from "../components/ui/bac-to-drop";
+import { Metadata } from "next";
+type LocaleParams = Promise<{ locale: "tr" | "en" }>;
 
-const inter = Inter({ subsets: ["latin"] });
+export async function generateMetadata({
+  params
+}: { params: LocaleParams }): Promise<Metadata> {
+  const { locale } = await params; // <-- önemli
+  const isTR = locale === "tr";
+  const base = "https://ferhanaydin.dev";
 
-export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Ferhan Aydın – Frontend Developer | Software Developer",
-};
+  return {
+    title: isTR
+      ? "Ferhan Aydın — Frontend Developer"
+      : "Ferhan Aydın — Frontend Developer",
+    description: isTR
+      ? "Modern, hızlı ve erişilebilir arayüzler. React, Next.js, TypeScript."
+      : "Modern, fast and accessible UIs. React, Next.js, TypeScript.",
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { tr: "/tr", en: "/en" }
+    },
+    openGraph: {
+      url: `${base}/${locale}`,
+      locale: isTR ? "tr_TR" : "en_US"
+    }
+  };
+}
+
 
 export default async function RootLayout({
   children,
@@ -31,8 +51,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className={`${inter.className} bg-mainColor text-white`}>
+  
         <NextIntlClientProvider messages={messages}>
           <div className="hidden md:block">
             <Header locale={locale} />
@@ -43,7 +62,6 @@ export default async function RootLayout({
           {children}
              <BackToTop />
         </NextIntlClientProvider>
-      </body>
-    </html>
+    
   );
 }

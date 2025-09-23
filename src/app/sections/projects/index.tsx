@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import Divider from "../../components/divider";
-import Loading from "../../components/loading";
-import Title from "../../components/title";
+import Divider from "../../components/ui/divider";
+import Loading from "../../components/ui/loading";
+import Title from "../../components/ui/title";
 import { useLocale, useTranslations } from "next-intl";
 
 type VercelProject = {

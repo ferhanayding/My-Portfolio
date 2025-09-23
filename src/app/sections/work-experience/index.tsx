@@ -1,10 +1,10 @@
 "use client";
 import React, { useRef, useState, useCallback } from "react";
-import Title from "../../components/title";
+import Title from "../../components/ui/title";
 import { motion } from "framer-motion";
 import { ExperienceCard } from "../../components/experience-card";
 import { CtaCard } from "../../components/experience-card/empty-card";
-import Divider from "../../components/divider";
+import Divider from "../../components/ui/divider";
 import { useLocale, useTranslations } from "next-intl";
 
 // Yerelleşmiş veri dosyaları:

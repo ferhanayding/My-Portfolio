@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import Badge from "../ui/badge";
 
 export type Project = {
   name: string;
@@ -36,7 +37,7 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
       <header
         className="
           p-4 sm:p-5 md:p-6 pb-2 md:pb-3 
-          flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4
+          flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4 items-start
         "
       >
         <div className="space-y-1">
@@ -45,33 +46,26 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
               {exp.role} — {exp.company}
             </h3>
             {exp.remote && (
-              <span className="text-[10px] sm:text-[11px] md:text-xs rounded-full px-2 py-0.5 border border-white/15 bg-white/5 text-zinc-300">
+              <Badge>
                 remote
-              </span>
+              </Badge>
             )}
           </div>
 
-          {(exp.location || exp.website) && (
-            <p className="text-xs sm:text-sm text-zinc-400 break-words">
+         
+        </div>
+          <div className="flex items-center gap-3">
+           
+        <Badge >
+          {exp.start} – {exp.end}
+        </Badge>
+          {exp.location && (
+               
+               <p className="text-xs sm:text-sm text-zinc-400 break-words">
               {exp.location}
-              {exp.location && exp.website ? " • " : ""}
-              {exp.website && (
-                <Link
-                  className="underline underline-offset-4 hover:no-underline"
-                  href={exp.website}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {new URL(exp.website).host}
-                </Link>
-              )}
             </p>
           )}
-        </div>
-
-        <span className="self-start md:self-auto text-[10px] sm:text-[11px] md:text-xs rounded-full px-2.5 md:px-3 py-1 border border-white/15 bg-white/5 text-zinc-300 whitespace-nowrap">
-          {exp.start} – {exp.end}
-        </span>
+          </div>
       </header>
 
       <div className="px-4 sm:px-5 md:px-6">
@@ -113,12 +107,9 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
         {exp.tech?.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-2">
             {exp.tech.map((t) => (
-              <span
-                key={t}
-                className="text-[11px] sm:text-xs rounded-full px-2 py-1 border border-white/15 bg-white/5 text-zinc-300"
-              >
+              <Badge key={t}>
                 {t}
-              </span>
+              </Badge>
             ))}
           </div>
         )}

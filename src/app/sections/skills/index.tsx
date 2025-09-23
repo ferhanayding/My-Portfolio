@@ -1,6 +1,6 @@
 "use client";
 import React, { JSX } from "react";
-import Title from "../../components/title";
+import Title from "../../components/ui/title";
 import { TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaSass } from "react-icons/fa";
 import { GiOctopus } from "react-icons/gi";
@@ -25,7 +25,7 @@ import {
 import { TbApi, TbNetwork, TbTopologyStar3, TbShare3 } from "react-icons/tb";
 import SkillItem from "../../components/skill-item";
 import { useTranslations } from "next-intl";
-import Divider from "../../components/divider";
+import Divider from "../../components/ui/divider";
 type Props = {};
 type SkillData = {
   directionLeft: boolean;

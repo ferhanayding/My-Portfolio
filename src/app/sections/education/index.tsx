@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
-import Title from "../../components/title";
+import Title from "../../components/ui/title";
 
 type Props = {};
 
 function CapIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-      <path d="M12 3 2 8l10 5 8-4.1V16h2V8L12 3Zm-6 9.3v3.2c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-3.2l-6 3-6-3Z" fill="currentColor" />
+      <path
+        d="M12 3 2 8l10 5 8-4.1V16h2V8L12 3Zm-6 9.3v3.2c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-3.2l-6 3-6-3Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }
@@ -16,7 +19,10 @@ function CapIcon() {
 function ListIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-      <path d="M4 4h16v2H4V4Zm0 5h16v2H4V9Zm0 5h16v2H4v-2Zm0 5h10v2H4v-2Z" fill="currentColor" />
+      <path
+        d="M4 4h16v2H4V4Zm0 5h16v2H4V9Zm0 5h16v2H4v-2Zm0 5h10v2H4v-2Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }
@@ -50,23 +56,27 @@ function EduCard({
             {icon}
           </span>
           <div>
-            <h2 className="text-base font-semibold tracking-wide text-white">{title}</h2>
-            <p className="text-xs text-gray-400">{subtitle}</p>
+            <h2 className="text-base font-semibold tracking-wide text-white">
+              {title}
+            </h2>
           </div>
         </div>
-        <span className="rounded-full bg-white/5 px-3 py-1 text-xs text-gray-300">{years}</span>
+        <span className="rounded-full bg-white/5 px-3 py-1 text-xs text-gray-300">
+          {years}
+        </span>
       </div>
 
       <div className="rounded-xl bg-white/5 p-4">
         <h3 className="text-lg font-medium text-white">{name}</h3>
-        {program ? <p className="mt-1 text-sm text-gray-300">{program}</p> : null}
+        {program ? (
+          <p className="mt-1 text-sm text-gray-300">{program}</p>
+        ) : null}
         <div className="mt-3 flex flex-wrap gap-2">
-          {level ? <span className="rounded-md bg-primary/20 px-2.5 py-1 text-xs text-primary">{level}</span> : null}
-          <span className="rounded-md bg-zinc-800 px-2.5 py-1 text-xs text-gray-300">{location}</span>
+          <span className="rounded-md bg-primary/20 px-2.5 py-1 text-xs text-primary">
+            {location}
+          </span>
         </div>
       </div>
-
-      <div className="mt-4 rounded-xl border border-white/10 bg-zinc-950/40 p-3 text-sm text-gray-300">{note}</div>
     </div>
   );
 }
@@ -103,7 +113,7 @@ export default function Education({}: Props) {
 
   return (
     <section className="px-4 max-w-6xl mx-auto my-10 ">
-      <Title  title="Educatıon"/> 
+      <Title title="Educatıon" />
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
         {items.map((it) => (
           <EduCard

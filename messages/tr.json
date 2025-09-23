@@ -54,5 +54,40 @@
       "years": "2013 → 2017",
       "note": "Bakü rüzgârı + sabah etütleri = dayanıklılık eğitimi. Diplomanın yanında güzel anılar da birikti. 🎓"
     }
+  },
+  "nowDoing": {
+    "title": "Now doing?",
+    "startLabel": "Başlangıç",
+    "startValue": "Eylül 2025",
+
+    "projectName": "Şarkılarla İngilizce Öğren",
+    "desc": "İngilizce seviyesi düşük kullanıcılar için fonetik odaklı bir karaoke projesi. “I love you” → “ay löv yu” gibi satır içi fonetik eşlemeyle sözleri anlayıp birlikte söyleme deneyimi sunuyor. Tasarım, mimari ve geliştirme bana ait.",
+
+    "tagPhonetic": "Fonetik karaoke",
+    "tagDetail": "Şarkı detayı",
+    "tagSearch": "Arama",
+    "tagPagination": "Sayfalama",
+    "tagAuth": "Kayıt & Giriş",
+    "tagSupabaseAuth": "Supabase Auth",
+
+    "summaryTitle": "Kısa Özet",
+    "summaryText": "Türkçe fonetik (ör. “ay löv yu”) ve orijinal İngilizce metin birlikte gösteriliyor. Şu an Türkiye odaklı; ileride İspanyolca konuşanlar için fenotipe uygun varyasyon gelecek. Tasarım, UX ve altyapı tamamen bana ait.",
+
+    "currentTitle": "Mevcut",
+    "current1": "Kayıt / Giriş (Supabase Auth)",
+    "current2": "Şarkı listesi, arama & sayfalama",
+    "current3": "Şarkı detayı ve fonetik eşleme",
+    "current4": "Next.js API Routes",
+
+    "plannedTitle": "Planlanan",
+    "planned1": "Favoriler",
+    "planned2": "Şarkı sonunda anahtar kelime çıkarımı",
+    "planned3": "Anahtar kelimeye göre quiz",
+    "planned4": "Tekil & genel ücretlendirme",
+
+    "screenshotLabel": "Proje Ekran Görüntüsü",
+    "goLive": "Canlıya Git",
+    "imageAlt1": "Proje ekran görüntüsü #1",
+    "imageAlt2": "Proje ekran görüntüsü #2"
   }
 }

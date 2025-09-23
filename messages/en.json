@@ -53,5 +53,41 @@
       "years": "2013 → 2017",
       "note": "A mix of Baku winds and early study hours—great endurance training. The diploma came with plenty of memories. 🎓"
     }
+    
+  },
+   "nowDoing": {
+    "title": "Now doing?",
+    "startLabel": "Start",
+    "startValue": "Sep 2025",
+
+    "projectName": "Learn English with Songs",
+    "desc": "A phonetic-focused karaoke project for learners with a lower English level. It maps in-line phonetics like “I love you” → “ay löv yu” so users can understand and sing along. Design, architecture and development are all mine.",
+
+    "tagPhonetic": "Phonetic karaoke",
+    "tagDetail": "Song detail",
+    "tagSearch": "Search",
+    "tagPagination": "Pagination",
+    "tagAuth": "Sign up & Sign in",
+    "tagSupabaseAuth": "Supabase Auth",
+
+    "summaryTitle": "Quick Summary",
+    "summaryText": "Turkish phonetics (e.g., “ay löv yu”) and the original English text are shown together. Currently Turkey-focused; later I’ll add a phenotype-friendly variation for Spanish speakers. Design, UX and infrastructure are fully mine.",
+
+    "currentTitle": "Current",
+    "current1": "Sign up / Sign in (Supabase Auth)",
+    "current2": "Songs list, search & pagination",
+    "current3": "Song detail with phonetic mapping",
+    "current4": "Next.js API Routes",
+
+    "plannedTitle": "Planned",
+    "planned1": "Favorites",
+    "planned2": "Keyword extraction at song end",
+    "planned3": "Quizzes based on keywords",
+    "planned4": "One-off & general pricing",
+
+    "screenshotLabel": "Project Screenshot",
+    "goLive": "View Live",
+    "imageAlt1": "Current project screenshot #1",
+    "imageAlt2": "Current project screenshot #2"
   }
 }
