@@ -11,7 +11,7 @@ type LocaleParams = Promise<{ locale: "tr" | "en" }>;
 export async function generateMetadata({
   params
 }: { params: LocaleParams }): Promise<Metadata> {
-  const { locale } = await params; // <-- önemli
+  const { locale } = await params; 
   const isTR = locale === "tr";
   const base = "https://ferhanaydin.dev";
 

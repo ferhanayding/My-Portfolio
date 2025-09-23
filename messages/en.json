@@ -53,9 +53,8 @@
       "years": "2013 → 2017",
       "note": "A mix of Baku winds and early study hours—great endurance training. The diploma came with plenty of memories. 🎓"
     }
-    
   },
-   "nowDoing": {
+  "nowDoing": {
     "title": "Now doing?",
     "startLabel": "Start",
     "startValue": "Sep 2025",
@@ -75,7 +74,7 @@
 
     "currentTitle": "Current",
     "current1": "Sign up / Sign in (Supabase Auth)",
-    "current2": "Songs list, search & pagination",
+    "current2": "Songs list, search & pagination (Supabase Auth)",
     "current3": "Song detail with phonetic mapping",
     "current4": "Next.js API Routes",
 
