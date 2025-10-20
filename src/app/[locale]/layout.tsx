@@ -1,4 +1,3 @@
-
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import "../globals.css";
@@ -9,11 +8,13 @@ import { Metadata } from "next";
 type LocaleParams = Promise<{ locale: "tr" | "en" }>;
 
 export async function generateMetadata({
-  params
-}: { params: LocaleParams }): Promise<Metadata> {
-  const { locale } = await params; 
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
+  const { locale } = await params;
   const isTR = locale === "tr";
-  const base = "https://ferhanaydin.dev";
+  const base = "https://ferhanaydin.com";
 
   return {
     title: isTR
@@ -24,15 +25,14 @@ export async function generateMetadata({
       : "Modern, fast and accessible UIs. React, Next.js, TypeScript.",
     alternates: {
       canonical: `/${locale}`,
-      languages: { tr: "/tr", en: "/en" }
+      languages: { tr: "/tr", en: "/en" },
     },
     openGraph: {
       url: `${base}/${locale}`,
-      locale: isTR ? "tr_TR" : "en_US"
-    }
+      locale: isTR ? "tr_TR" : "en_US",
+    },
   };
 }
-
 
 export default async function RootLayout({
   children,
@@ -51,17 +51,15 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-  
-        <NextIntlClientProvider messages={messages}>
-          <div className="hidden md:block">
-            <Header locale={locale} />
-          </div>
-          <div className="md:hidden block relative">
-            <MobileHeader locale={locale} />
-          </div>
-          {children}
-             <BackToTop />
-        </NextIntlClientProvider>
-    
+    <NextIntlClientProvider messages={messages}>
+      <div className="hidden md:block">
+        <Header locale={locale} />
+      </div>
+      <div className="md:hidden block relative">
+        <MobileHeader locale={locale} />
+      </div>
+      {children}
+      <BackToTop />
+    </NextIntlClientProvider>
   );
 }
