@@ -5,11 +5,10 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone', 
-  experimental: {
-    outputFileTracingExcludes: {
-      '*': ['**/node_modules/**'],
-    },
+  output: 'standalone',
+
+  outputFileTracingExcludes: {
+    '*': ['**/node_modules/**'],
   },
 };
 
