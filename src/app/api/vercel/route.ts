@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-// export const runtime = "nodejs";
 
 export async function GET(_req: NextRequest) {
-    console.log("TOKEN:", process.env.VERCEL_API_TOKEN?.slice(0, 5)); // test
-  const token = process.env.VERCEL_API_TOKEN;
+  const token = process.env.NEXT_VERCEL_API_TOKEN;
   if (!token) {
     return NextResponse.json(
       { error: "Missing VERCEL_API_TOKEN" },
