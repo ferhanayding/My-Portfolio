@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-export const runtime = "nodejs";
+// export const runtime = "nodejs";
 
 export async function GET(_req: NextRequest) {
     console.log("TOKEN:", process.env.VERCEL_API_TOKEN?.slice(0, 5)); // test
